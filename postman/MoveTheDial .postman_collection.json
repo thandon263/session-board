@@ -1,0 +1,1533 @@
+{
+    "info": {
+        "_postman_id": "6532265c-05a5-44fb-879f-6f57d4d7d47b",
+        "name": "MoveTheDial ",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+        {
+            "name": "Authentication",
+            "item": [
+                {
+                    "name": "MTD - Register",
+                    "event": [
+                        {
+                            "listen": "test",
+                            "script": {
+                                "id": "ef8a1d7d-296c-4320-b4c6-a2c119d5fc53",
+                                "exec": [
+                                    "const response = JSON.parse(responseBody)",
+                                    "",
+                                    "pm.test(\"Content-Type is present\", function () {",
+                                    "    pm.response.to.have.header(\"Content-Type\");",
+                                    "});",
+                                    "",
+                                    "pm.test(\"Response time is less than 200ms\", function () {",
+                                    "    pm.expect(pm.response.responseTime).to.be.below(200);",
+                                    "});",
+                                    "",
+                                    "pm.test(\"Status code is 200\", function () {",
+                                    "    pm.response.to.have.status(200);",
+                                    "});",
+                                    "",
+                                    "const auth_token = response.auth_token ",
+                                    "",
+                                    "pm.environment.set(\"auth_token\", auth_token)"
+                                ],
+                                "type": "text/javascript"
+                            }
+                        }
+                    ],
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "name": "Content-Type",
+                                "value": "application/json",
+                                "type": "text"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n\t\"first_name\": \"Eric\",\n\t\"last_name\": \"Ndlovu\",\n\t\"email\": \"Eric.n@movethedial.com\",\n\t\"password\": \"password123\",\n\t\"mentor\": true,\n\t\"mentee\": false\n}",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            }
+                        },
+                        "url": {
+                            "raw": "{{host}}/api/v1/auth/register",
+                            "host": ["{{host}}"],
+                            "path": ["api", "v1", "auth", "register"]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "MTD - Login",
+                    "event": [
+                        {
+                            "listen": "test",
+                            "script": {
+                                "id": "45aa4b6b-7c52-455c-ab46-0af0eb0e304f",
+                                "exec": [
+                                    "const response = JSON.parse(responseBody)",
+                                    "",
+                                    "const auth_token = response.auth_token ",
+                                    "",
+                                    "console.log(response)",
+                                    "",
+                                    "pm.environment.set(\"auth_token\", auth_token)",
+                                    "",
+                                    "pm.test(\"Status code is 200\", function () {",
+                                    "    pm.response.to.have.status(200);",
+                                    "});",
+                                    "",
+                                    "pm.test(\"Response time is less than 200ms\", function () {",
+                                    "    pm.expect(pm.response.responseTime).to.be.below(200);",
+                                    "});",
+                                    "",
+                                    "pm.test(\"Successful POST request\", function () {",
+                                    "    pm.expect(pm.response.code).to.be.oneOf([200]);",
+                                    "});"
+                                ],
+                                "type": "text/javascript"
+                            }
+                        },
+                        {
+                            "listen": "prerequest",
+                            "script": {
+                                "id": "9d478d23-5e00-476e-9493-c2c3a5169b2a",
+                                "exec": [""],
+                                "type": "text/javascript"
+                            }
+                        }
+                    ],
+                    "request": {
+                        "auth": {
+                            "type": "noauth"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "name": "Content-Type",
+                                "value": "application/json",
+                                "type": "text"
+                            },
+                            {
+                                "key": "Authorization",
+                                "value": "{{auth_token}}",
+                                "type": "text"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n\t\"email\": \"thando@movethedial.com\",\n\t\"password\": \"password\"\n}",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            }
+                        },
+                        "url": {
+                            "raw": "{{host}}/api/v1/auth/login",
+                            "host": ["{{host}}"],
+                            "path": ["api", "v1", "auth", "login"]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "MTD - Logout",
+                    "event": [
+                        {
+                            "listen": "test",
+                            "script": {
+                                "id": "2905f4a4-77ce-428b-9349-aa31ea037d3e",
+                                "exec": [
+                                    "const response = JSON.parse(responseBody)",
+                                    "",
+                                    "pm.test(\"Status code is 200\", function () {",
+                                    "    pm.response.to.have.status(200);",
+                                    "});",
+                                    "",
+                                    "pm.test(\"Test to see if Auth-token is Empty\", function () {",
+                                    "    var jsonData = pm.response.json();",
+                                    "    console.log(jsonData)",
+                                    "    pm.expect(jsonData.payload.auth_token).to.eql(\"\");",
+                                    "});"
+                                ],
+                                "type": "text/javascript"
+                            }
+                        }
+                    ],
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "name": "Content-Type",
+                                "value": "application/json",
+                                "type": "text"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n\t\"email\":  \"bohdan@movethedial.com\"\n}",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            }
+                        },
+                        "url": {
+                            "raw": "{{host}}/api/v1/auth/logout",
+                            "host": ["{{host}}"],
+                            "path": ["api", "v1", "auth", "logout"]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "MTD - Update Password",
+                    "event": [
+                        {
+                            "listen": "test",
+                            "script": {
+                                "id": "6b8532b3-4803-48c9-ba8a-4047b7f952de",
+                                "exec": [
+                                    "",
+                                    "pm.test(\"Response time is less than 200ms\", function () {",
+                                    "    pm.expect(pm.response.responseTime).to.be.below(200);",
+                                    "});pm.test(\"Content-Type is present\", function () {",
+                                    "    pm.response.to.have.header(\"Content-Type\");",
+                                    "});pm.test(\"Status code is 200\", function () {",
+                                    "    pm.response.to.have.status(200);",
+                                    "});"
+                                ],
+                                "type": "text/javascript"
+                            }
+                        }
+                    ],
+                    "request": {
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "name": "Content-Type",
+                                "value": "application/json",
+                                "type": "text"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n\t\"email\": \"thando@movethedial.com\",\n\t\"password\": \"thando12345\"\n}",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            }
+                        },
+                        "url": {
+                            "raw": "{{host}}/api/v1/auth/updatepassword",
+                            "host": ["{{host}}"],
+                            "path": ["api", "v1", "auth", "updatepassword"]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "MTD - User Status",
+                    "event": [
+                        {
+                            "listen": "test",
+                            "script": {
+                                "id": "7cb8bffb-64c7-47fd-b87c-cf752e14835c",
+                                "exec": [
+                                    "pm.test(\"Response time is less than 200ms\", function () {",
+                                    "    pm.expect(pm.response.responseTime).to.be.below(200);",
+                                    "});"
+                                ],
+                                "type": "text/javascript"
+                            }
+                        }
+                    ],
+                    "protocolProfileBehavior": {
+                        "disableBodyPruning": true
+                    },
+                    "request": {
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "name": "Content-Type",
+                                "value": "application/json",
+                                "type": "text"
+                            },
+                            {
+                                "key": "Authorization",
+                                "value": "{{auth_token}}",
+                                "type": "text"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n\t\"email\":  \"admin@movethedial.com\"\n}",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            }
+                        },
+                        "url": {
+                            "raw": "{{host}}/api/v1/auth/user-status",
+                            "host": ["{{host}}"],
+                            "path": ["api", "v1", "auth", "user-status"]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "MTD - Forgot Password",
+                    "event": [
+                        {
+                            "listen": "test",
+                            "script": {
+                                "id": "3252a64c-1bfd-48dc-a167-9bea90384c24",
+                                "exec": [
+                                    "const response = JSON.parse(responseBody)",
+                                    "",
+                                    "const reset_code = response.code ",
+                                    "",
+                                    "pm.environment.set(\"reset_code\", reset_code);",
+                                    "",
+                                    "pm.test(\"Status code is 202\", function () {",
+                                    "    pm.response.to.have.status(202);",
+                                    "});",
+                                    ""
+                                ],
+                                "type": "text/javascript"
+                            }
+                        }
+                    ],
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "name": "Content-Type",
+                                "value": "application/json",
+                                "type": "text"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n\t\"email\": \"thando@movethedial.com\"\n}",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            }
+                        },
+                        "url": {
+                            "raw": "{{host}}/api/v1/auth/forgot-password",
+                            "host": ["{{host}}"],
+                            "path": ["api", "v1", "auth", "forgot-password"]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "MTD - Check Reset Code isValid",
+                    "event": [
+                        {
+                            "listen": "test",
+                            "script": {
+                                "id": "14e5c9ec-015f-4276-87bf-4ae48f48b3f5",
+                                "exec": [
+                                    "pm.test(\"Response time is less than 200ms\", function () {",
+                                    "    pm.expect(pm.response.responseTime).to.be.below(200);",
+                                    "});",
+                                    "pm.test(\"Status code is 200\", function () {",
+                                    "    pm.response.to.have.status(200);",
+                                    "});"
+                                ],
+                                "type": "text/javascript"
+                            }
+                        }
+                    ],
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{host}}/api/v1/auth/reset-password?code={{reset_code}}",
+                            "host": ["{{host}}"],
+                            "path": ["api", "v1", "auth", "reset-password"],
+                            "query": [
+                                {
+                                    "key": "code",
+                                    "value": "{{reset_code}}"
+                                }
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "MTD - Reset Password",
+                    "event": [
+                        {
+                            "listen": "test",
+                            "script": {
+                                "id": "6fadfdac-29f9-46d0-a058-63e2e951e7c7",
+                                "exec": [
+                                    "pm.test(\"Status code is 200\", function () {",
+                                    "",
+                                    "pm.test(\"Your test name\", function () {",
+                                    "    var jsonData = pm.response.json();",
+                                    "    pm.expect(jsonData.value).to.eql(100);",
+                                    "});    pm.response.to.have.status(200);",
+                                    "});"
+                                ],
+                                "type": "text/javascript"
+                            }
+                        }
+                    ],
+                    "request": {
+                        "method": "PATCH",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "name": "Content-Type",
+                                "value": "application/json",
+                                "type": "text"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n\t\"code\": \"7FE862\",\n\t\"password\": \"thando234\"\n}",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            }
+                        },
+                        "url": {
+                            "raw": "{{host}}/api/v1/auth/users/password?",
+                            "host": ["{{host}}"],
+                            "path": ["api", "v1", "auth", "users", "password"],
+                            "query": [
+                                {
+                                    "key": "code",
+                                    "value": "{{reset_code}}",
+                                    "disabled": true
+                                }
+                            ]
+                        }
+                    },
+                    "response": []
+                }
+            ],
+            "protocolProfileBehavior": {}
+        },
+        {
+            "name": "Profile",
+            "item": [
+                {
+                    "name": "MTD - Get User Profile",
+                    "event": [
+                        {
+                            "listen": "test",
+                            "script": {
+                                "id": "9a2beccf-0ba3-46d1-9aa0-4bbf0cf8b0b4",
+                                "exec": [
+                                    "pm.test(\"Status code is 200\", function () {",
+                                    "    pm.response.to.have.status(200);",
+                                    "});",
+                                    "pm.test(\"Response time is less than 200ms\", function () {",
+                                    "    pm.expect(pm.response.responseTime).to.be.below(200);",
+                                    "});"
+                                ],
+                                "type": "text/javascript"
+                            }
+                        }
+                    ],
+                    "request": {
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Authorization",
+                                "value": "{{auth_token}}",
+                                "type": "text"
+                            }
+                        ],
+                        "url": {
+                            "raw": "{{host}}/api/v1/profile/info",
+                            "host": ["{{host}}"],
+                            "path": ["api", "v1", "profile", "info"]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "MTD - Update Names",
+                    "event": [
+                        {
+                            "listen": "test",
+                            "script": {
+                                "id": "db0b9d9a-40e2-447d-948f-4021421dc6ce",
+                                "exec": [
+                                    "pm.test(\"Response time is less than 200ms\", function () {",
+                                    "    pm.expect(pm.response.responseTime).to.be.below(200);",
+                                    "});",
+                                    "pm.test(\"Status code is 200\", function () {",
+                                    "    pm.response.to.have.status(200);",
+                                    "});"
+                                ],
+                                "type": "text/javascript"
+                            }
+                        }
+                    ],
+                    "request": {
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Authorization",
+                                "value": "{{auth_token}}",
+                                "type": "text"
+                            },
+                            {
+                                "key": "Content-Type",
+                                "name": "Content-Type",
+                                "value": "application/json",
+                                "type": "text"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n\t\"first_name\": \"Thando\",\n\t\"last_name\": \"Ncube\"\n}",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            }
+                        },
+                        "url": {
+                            "raw": "{{host}}/api/v1/profile/update/names",
+                            "host": ["{{host}}"],
+                            "path": ["api", "v1", "profile", "update", "names"]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "MTD - Update People and Job Title",
+                    "event": [
+                        {
+                            "listen": "test",
+                            "script": {
+                                "id": "c1da4b59-6d96-4a01-8d23-c1a79d4f1854",
+                                "exec": [
+                                    "pm.test(\"Status code is 200\", function () {",
+                                    "    pm.response.to.have.status(200);",
+                                    "});",
+                                    "pm.test(\"Response time is less than 200ms\", function () {",
+                                    "    pm.expect(pm.response.responseTime).to.be.below(200);",
+                                    "});",
+                                    "pm.test(\"Content-Type is present\", function () {",
+                                    "    pm.response.to.have.header(\"Content-Type\");",
+                                    "});"
+                                ],
+                                "type": "text/javascript"
+                            }
+                        }
+                    ],
+                    "request": {
+                        "method": "PATCH",
+                        "header": [
+                            {
+                                "key": "Authorization",
+                                "value": "{{auth_token}}",
+                                "type": "text"
+                            },
+                            {
+                                "key": "Content-Type",
+                                "name": "Content-Type",
+                                "value": "application/json",
+                                "type": "text"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n\t\"job_title\": \"Software Programmer\",\n\t\"people_managed\": 13\n}",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            }
+                        },
+                        "url": {
+                            "raw": "{{host}}/api/v1/profile/update/people",
+                            "host": ["{{host}}"],
+                            "path": ["api", "v1", "profile", "update", "people"]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "MTD - Update Bio",
+                    "event": [
+                        {
+                            "listen": "test",
+                            "script": {
+                                "id": "bbc36b8e-1a94-4142-b571-bee75e5a5d13",
+                                "exec": [
+                                    "pm.test(\"Status code is 200\", function () {",
+                                    "    pm.response.to.have.status(200);",
+                                    "});",
+                                    "pm.test(\"Response time is less than 200ms\", function () {",
+                                    "    pm.expect(pm.response.responseTime).to.be.below(200);",
+                                    "});"
+                                ],
+                                "type": "text/javascript"
+                            }
+                        }
+                    ],
+                    "request": {
+                        "method": "PATCH",
+                        "header": [
+                            {
+                                "key": "Authorization",
+                                "value": "{{auth_token}}",
+                                "type": "text"
+                            },
+                            {
+                                "key": "Content-Type",
+                                "name": "Content-Type",
+                                "value": "application/json",
+                                "type": "text"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n\t\"bio\": \"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\"\n}",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            }
+                        },
+                        "url": {
+                            "raw": "{{host}}/api/v1/profile/update/bio",
+                            "host": ["{{host}}"],
+                            "path": ["api", "v1", "profile", "update", "bio"]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "MTD - Update Image",
+                    "event": [
+                        {
+                            "listen": "test",
+                            "script": {
+                                "id": "5dba1d7f-8f3d-43d3-b690-517c4cb1d5f5",
+                                "exec": [
+                                    "pm.test(\"Status code is 200\", function () {",
+                                    "    pm.response.to.have.status(200);",
+                                    "});",
+                                    "pm.test(\"Successful POST request\", function () {",
+                                    "    pm.expect(pm.response.code).to.be.oneOf([201,202]);",
+                                    "});"
+                                ],
+                                "type": "text/javascript"
+                            }
+                        }
+                    ],
+                    "request": {
+                        "method": "PATCH",
+                        "header": [
+                            {
+                                "key": "Authorization",
+                                "value": "{{auth_token}}",
+                                "type": "text"
+                            },
+                            {
+                                "key": "Content-Type",
+                                "name": "Content-Type",
+                                "value": "application/json",
+                                "type": "text"
+                            }
+                        ],
+                        "body": {
+                            "mode": "formdata",
+                            "formdata": [
+                                {
+                                    "key": "photo",
+                                    "type": "file",
+                                    "src": "/Users/thandoncube/Downloads/69720370_2422602934441912_1907921028042981376_o.jpg"
+                                }
+                            ],
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            }
+                        },
+                        "url": {
+                            "raw": "{{host}}/api/v1/profile/update/image",
+                            "host": ["{{host}}"],
+                            "path": ["api", "v1", "profile", "update", "image"]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "MTD - Update the password",
+                    "event": [
+                        {
+                            "listen": "test",
+                            "script": {
+                                "id": "85dea4a6-907e-484a-9a95-5cf6e9a956d2",
+                                "exec": [
+                                    "pm.test(\"Status code is 200\", function () {",
+                                    "    pm.response.to.have.status(200);",
+                                    "});"
+                                ],
+                                "type": "text/javascript"
+                            }
+                        }
+                    ],
+                    "request": {
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "name": "Content-Type",
+                                "value": "application/json",
+                                "type": "text"
+                            },
+                            {
+                                "key": "Authorization",
+                                "value": "{{auth_token}}",
+                                "type": "text"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n\t\"password\": \"\"\n}",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            }
+                        },
+                        "url": {
+                            "raw": "{{host}}/api/v1/profile/update/password",
+                            "host": ["{{host}}"],
+                            "path": ["api", "v1", "profile", "update", "password"]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "MTD - Update the email",
+                    "event": [
+                        {
+                            "listen": "test",
+                            "script": {
+                                "id": "4d46901a-6477-493f-9c5c-41c18abfe7f8",
+                                "exec": [
+                                    "pm.test(\"Status code is 200\", function () {",
+                                    "    pm.response.to.have.status(200);",
+                                    "});"
+                                ],
+                                "type": "text/javascript"
+                            }
+                        }
+                    ],
+                    "request": {
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "name": "Content-Type",
+                                "type": "text",
+                                "value": "application/json"
+                            },
+                            {
+                                "key": "Authorization",
+                                "value": "{{auth_token}}",
+                                "type": "text"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n\t\"email\": \"ncubethando20@gmail.com\"\n}",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            }
+                        },
+                        "url": {
+                            "raw": "{{host}}/api/v1/profile/update/email",
+                            "host": ["{{host}}"],
+                            "path": ["api", "v1", "profile", "update", "email"]
+                        }
+                    },
+                    "response": []
+                }
+            ],
+            "protocolProfileBehavior": {}
+        },
+        {
+            "name": "Account",
+            "item": [
+                {
+                    "name": "MTD - Create new issue",
+                    "event": [
+                        {
+                            "listen": "test",
+                            "script": {
+                                "id": "fd2db98e-c721-45f5-9561-8d669afb972b",
+                                "exec": [
+                                    "pm.test(\"Status code is 200\", function () {",
+                                    "    pm.response.to.have.status(200);",
+                                    "});"
+                                ],
+                                "type": "text/javascript"
+                            }
+                        }
+                    ],
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Authorization",
+                                "value": "{{auth_token}}",
+                                "type": "text"
+                            },
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json",
+                                "type": "text"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n\t\"issueType\": \"General Feedback\"\n}"
+                        },
+                        "url": {
+                            "raw": "{{host}}/api/v1/account/new",
+                            "host": ["{{host}}"],
+                            "path": ["api", "v1", "account", "new"]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "MTD - Get Issue by Id",
+                    "event": [
+                        {
+                            "listen": "test",
+                            "script": {
+                                "id": "516ad864-0054-43ea-a6e2-6c6082cd88c3",
+                                "exec": [
+                                    "pm.test(\"Status code is 200\", function () {",
+                                    "    pm.response.to.have.status(200);",
+                                    "});"
+                                ],
+                                "type": "text/javascript"
+                            }
+                        }
+                    ],
+                    "protocolProfileBehavior": {
+                        "disableBodyPruning": true
+                    },
+                    "request": {
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Authorization",
+                                "value": "{{auth_token}}",
+                                "type": "text"
+                            },
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json",
+                                "type": "text"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n\t\"issueId\": 1\n}"
+                        },
+                        "url": {
+                            "raw": "{{host}}/api/v1/account/info?",
+                            "host": ["{{host}}"],
+                            "path": ["api", "v1", "account", "info"],
+                            "query": [
+                                {
+                                    "key": "",
+                                    "value": "",
+                                    "disabled": true
+                                }
+                            ]
+                        }
+                    },
+                    "response": []
+                }
+            ],
+            "protocolProfileBehavior": {}
+        },
+        {
+            "name": "Goal",
+            "item": [
+                {
+                    "name": "MTD - Initialze Goal Entry",
+                    "event": [
+                        {
+                            "listen": "test",
+                            "script": {
+                                "id": "bb8c5b44-3d8c-4fe4-8eb2-3c2bb85e4150",
+                                "exec": [
+                                    "pm.test(\"Status code is 200\", function () {",
+                                    "    pm.response.to.have.status(200);",
+                                    "});"
+                                ],
+                                "type": "text/javascript"
+                            }
+                        }
+                    ],
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Authorization",
+                                "value": "{{auth_token}}",
+                                "type": "text"
+                            }
+                        ],
+                        "url": {
+                            "raw": "{{host}}/api/v1/goal/initialize",
+                            "host": ["{{host}}"],
+                            "path": ["api", "v1", "goal", "initialize"]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "MTD - Get Goal Information",
+                    "event": [
+                        {
+                            "listen": "test",
+                            "script": {
+                                "id": "7c354b65-fa99-40c3-ad1d-75b809326290",
+                                "exec": [
+                                    "pm.test(\"Status code is 200\", function () {",
+                                    "    pm.response.to.have.status(200);",
+                                    "});"
+                                ],
+                                "type": "text/javascript"
+                            }
+                        }
+                    ],
+                    "request": {
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Authorization",
+                                "value": "{{auth_token}}",
+                                "type": "text"
+                            }
+                        ],
+                        "url": {
+                            "raw": "{{host}}/api/v1/goal/info",
+                            "host": ["{{host}}"],
+                            "path": ["api", "v1", "goal", "info"]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "MTD - Update Goal Title",
+                    "event": [
+                        {
+                            "listen": "test",
+                            "script": {
+                                "id": "6d0a275f-0798-4c51-a9f7-1e1f418ef51c",
+                                "exec": [
+                                    "pm.test(\"Status code is 200\", function () {",
+                                    "    pm.response.to.have.status(200);",
+                                    "});"
+                                ],
+                                "type": "text/javascript"
+                            }
+                        }
+                    ],
+                    "request": {
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Authorization",
+                                "value": "{{auth_token}}",
+                                "type": "text"
+                            },
+                            {
+                                "key": "Content-Type",
+                                "name": "Content-Type",
+                                "value": "application/json",
+                                "type": "text"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n\t\"goal_title\": \"Become an outstanding public speaker.\"\n}",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            }
+                        },
+                        "url": {
+                            "raw": "{{host}}/api/v1/goal/update-title",
+                            "host": ["{{host}}"],
+                            "path": ["api", "v1", "goal", "update-title"]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "MTD - Update Goal Type",
+                    "event": [
+                        {
+                            "listen": "test",
+                            "script": {
+                                "id": "f09bad83-3c69-4e6a-acd1-c44e7417e919",
+                                "exec": [
+                                    "pm.test(\"Status code is 200\", function () {",
+                                    "    pm.response.to.have.status(200);",
+                                    "});"
+                                ],
+                                "type": "text/javascript"
+                            }
+                        }
+                    ],
+                    "request": {
+                        "auth": {
+                            "type": "noauth"
+                        },
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Authorization",
+                                "value": "{{auth_token}}",
+                                "type": "text"
+                            },
+                            {
+                                "key": "Content-Type",
+                                "name": "Content-Type",
+                                "value": "application/json",
+                                "type": "text"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n\t\"goal_type\": 2\n}",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            }
+                        },
+                        "url": {
+                            "raw": "{{host}}/api/v1/goal/update-type",
+                            "host": ["{{host}}"],
+                            "path": ["api", "v1", "goal", "update-type"]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "MTD - Update Mentorship Type",
+                    "event": [
+                        {
+                            "listen": "test",
+                            "script": {
+                                "id": "cb663ffc-ff70-4545-a898-82d950ca58b3",
+                                "exec": [
+                                    "pm.test(\"Status code is 200\", function () {",
+                                    "    pm.response.to.have.status(200);",
+                                    "});"
+                                ],
+                                "type": "text/javascript"
+                            }
+                        }
+                    ],
+                    "request": {
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Authorization",
+                                "value": "{{auth_token}}",
+                                "type": "text"
+                            },
+                            {
+                                "key": "Content-Type",
+                                "name": "Content-Type",
+                                "value": "application/json",
+                                "type": "text"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n\t\"mentorship_type\": [1,3,2]\n}",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            }
+                        },
+                        "url": {
+                            "raw": "{{host}}/api/v1/goal/mentorship-type",
+                            "host": ["{{host}}"],
+                            "path": ["api", "v1", "goal", "mentorship-type"]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "MTD - Update Expertise",
+                    "request": {
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "name": "Content-Type",
+                                "value": "application/json",
+                                "type": "text"
+                            },
+                            {
+                                "key": "Authorization",
+                                "value": "{{auth_token}}",
+                                "type": "text"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n\t\"expertise\": 2\n}",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            }
+                        },
+                        "url": {
+                            "raw": "{{host}}/api/v1/goal/expertise",
+                            "host": ["{{host}}"],
+                            "path": ["api", "v1", "goal", "expertise"]
+                        }
+                    },
+                    "response": []
+                }
+            ],
+            "protocolProfileBehavior": {}
+        },
+        {
+            "name": "Time",
+            "item": [
+                {
+                    "name": "MTD - Create Time",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Authorization",
+                                "value": "{{auth_token}}",
+                                "type": "text"
+                            },
+                            {
+                                "key": "Content-Type",
+                                "name": "Content-Type",
+                                "value": "application/json",
+                                "type": "text"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n\t\"time\": \"1:00pm\"\n}",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            }
+                        },
+                        "url": {
+                            "raw": "{{host}}/api/v1/time/",
+                            "host": ["{{host}}"],
+                            "path": ["api", "v1", "time", ""]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "MTD - Get Time Info",
+                    "protocolProfileBehavior": {
+                        "disableBodyPruning": true
+                    },
+                    "request": {
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Authorization",
+                                "value": "{{auth_token}}",
+                                "type": "text"
+                            },
+                            {
+                                "key": "Content-Type",
+                                "name": "Content-Type",
+                                "value": "application/json",
+                                "type": "text"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n\t\"time\": \"1:30pm\"\n}",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            }
+                        },
+                        "url": {
+                            "raw": "{{host}}/api/v1/time/info",
+                            "host": ["{{host}}"],
+                            "path": ["api", "v1", "time", "info"]
+                        }
+                    },
+                    "response": []
+                }
+            ],
+            "protocolProfileBehavior": {}
+        },
+        {
+            "name": "Meetings",
+            "item": [
+                {
+                    "name": "MTD - Create Your Availability",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Authorization",
+                                "value": "{{auth_token}}",
+                                "type": "text"
+                            },
+                            {
+                                "key": "Content-Type",
+                                "name": "Content-Type",
+                                "value": "application/json",
+                                "type": "text"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n\t\"day\": \"4/1/2020\",\n\t\"time\": \"3:00 PM\"\n}",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            }
+                        },
+                        "url": {
+                            "raw": "{{host}}/api/v1/availability/create",
+                            "host": ["{{host}}"],
+                            "path": ["api", "v1", "availability", "create"]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "MTD - Get All Available time slots ",
+                    "protocolProfileBehavior": {
+                        "disableBodyPruning": true
+                    },
+                    "request": {
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Authorization",
+                                "value": "{{auth_token}}",
+                                "type": "text"
+                            },
+                            {
+                                "key": "Content-Type",
+                                "name": "Content-Type",
+                                "value": "application/json",
+                                "type": "text"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n\t\"day\": \"03/30/2020\"\n}",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            }
+                        },
+                        "url": {
+                            "raw": "{{host}}/api/v1/availability/info",
+                            "host": ["{{host}}"],
+                            "path": ["api", "v1", "availability", "info"]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "MTD - Update Availability",
+                    "request": {
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Authorization",
+                                "value": "{{auth_token}}",
+                                "type": "text"
+                            },
+                            {
+                                "key": "Content-Type",
+                                "name": "Content-Type",
+                                "value": "application/json",
+                                "type": "text"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n\t\"time\": \"5PM\",\n\t\"availabilityId\": 2\n}",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            }
+                        },
+                        "url": {
+                            "raw": "{{host}}/api/v1/availability/update-time",
+                            "host": ["{{host}}"],
+                            "path": ["api", "v1", "availability", "update-time"]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "MTD - Add New Location",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Authorization",
+                                "value": "{{auth_token}}",
+                                "type": "text"
+                            },
+                            {
+                                "key": "Content-Type",
+                                "name": "Content-Type",
+                                "value": "application/json",
+                                "type": "text"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n\t\"name\": \"Starbucks - 123 Queen St West\",\n\t\"location\": {\"DD\":{\"lat\":43.65073,\"lng\":-79.38375},\"DMS\":{\"lat\":\"43º39'2.64\\\" N\",\"lng\":\"79º23'1.48\\\" W\"},\"geohash\":\"dpz83d6ebw\",\"UTM\":\"17T 630340.37310359 4834350.78445287\"},\n\t\"skypeId\": \"\"\n}",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            }
+                        },
+                        "url": {
+                            "raw": "{{host}}/api/v1/location/new-location",
+                            "host": ["{{host}}"],
+                            "path": ["api", "v1", "location", "new-location"]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "MTD - Get Location Information",
+                    "protocolProfileBehavior": {
+                        "disableBodyPruning": true
+                    },
+                    "request": {
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Authorization",
+                                "value": "{{auth_token}}",
+                                "type": "text"
+                            },
+                            {
+                                "key": "Content-Type",
+                                "name": "Content-Type",
+                                "value": "application/json",
+                                "type": "text"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n\t\n}",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            }
+                        },
+                        "url": {
+                            "raw": "{{host}}/api/v1/location/info",
+                            "host": ["{{host}}"],
+                            "path": ["api", "v1", "location", "info"]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "MTD - Update Location Data",
+                    "request": {
+                        "method": "PATCH",
+                        "header": [
+                            {
+                                "key": "Authorization",
+                                "value": "{{auth_token}}",
+                                "type": "text"
+                            },
+                            {
+                                "key": "Content-Type",
+                                "name": "Content-Type",
+                                "value": "application/json",
+                                "type": "text"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n\t\"locationId\": 2,\n\t\"name\": \"Starbucks, 525 University Ave R1, Toronto, ON M5G 2L3\",\n\t\"location\": {\"DD\":{\"lat\":43.65073,\"lng\":-79.38375},\"DMS\":{\"lat\":\"43º39'2.64\\\" N\",\"lng\":\"79º23'1.48\\\" W\"},\"geohash\":\"dpz83d6ebw\",\"UTM\":\"17T 630340.37310359 4834350.78445287\"}\n}",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            }
+                        },
+                        "url": {
+                            "raw": "{{host}}/api/v1/location/update-location",
+                            "host": ["{{host}}"],
+                            "path": ["api", "v1", "location", "update-location"]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "MTD - Create Meeting",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Authorization",
+                                "value": "{{auth_token}}",
+                                "type": "text"
+                            },
+                            {
+                                "key": "Content-Type",
+                                "name": "Content-Type",
+                                "value": "application/json",
+                                "type": "text"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n\t\"locationId\": 2,\n\t\"availabilityId\": 1\n}",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            }
+                        },
+                        "url": {
+                            "raw": "{{host}}/api/v1/meeting/create-meeting",
+                            "host": ["{{host}}"],
+                            "path": ["api", "v1", "meeting", "create-meeting"]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "MTD - Get Meeting By Id",
+                    "protocolProfileBehavior": {
+                        "disableBodyPruning": true
+                    },
+                    "request": {
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Authorization",
+                                "value": "{{auth_token}}",
+                                "type": "text"
+                            },
+                            {
+                                "key": "Content-Type",
+                                "name": "Content-Type",
+                                "value": "application/json",
+                                "type": "text"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n\t\"meetingId\": 1\n}",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            }
+                        },
+                        "url": {
+                            "raw": "{{host}}/api/v1/meeting/meeting-info",
+                            "host": ["{{host}}"],
+                            "path": ["api", "v1", "meeting", "meeting-info"]
+                        }
+                    },
+                    "response": []
+                }
+            ],
+            "protocolProfileBehavior": {}
+        },
+        {
+            "name": "MTD - Ping",
+            "event": [
+                {
+                    "listen": "test",
+                    "script": {
+                        "id": "2cb0e6e5-5091-4e31-a67c-0fcdd85df922",
+                        "exec": [
+                            "pm.test(\"Status code is 200\", function () {",
+                            "    pm.response.to.have.status(200);",
+                            "});"
+                        ],
+                        "type": "text/javascript"
+                    }
+                }
+            ],
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                    "raw": "{{host}}/ping",
+                    "host": ["{{host}}"],
+                    "path": ["ping"]
+                }
+            },
+            "response": []
+        }
+    ],
+    "protocolProfileBehavior": {}
+}

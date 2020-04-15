@@ -1,0 +1,922 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="MoveTheDial " tests="23" time="0.000">
+  <testsuite name="Authentication / MTD - Register" id="0f896d37-caf3-47af-b477-c88f97d6952a" timestamp="2020-03-17T15:19:49.925Z" tests="0" failures="0" errors="2" time="0.000">
+    <system-err>
+      <![CDATA[Iteration: 0
+RequestError: Error: Invalid URI "http:///%7B%7Bhost%7D%7D/api/v1/auth/register"
+    at Request.init (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/postman-request/request.js:344:31)
+    at new Request (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/postman-request/request.js:171:8)
+    at request (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/postman-request/index.js:47:10)
+    at /Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/lib/requester/request-wrapper.js:84:23
+    at /Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/async/dist/async.js:473:16
+    at next (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/async/dist/async.js:5329:29)
+    at /Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/async/dist/async.js:969:16
+    at setCertificate (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/lib/requester/request-wrapper.js:50:20)
+    at /Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/lib/requester/request-wrapper.js:79:13
+    at nextTask (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/async/dist/async.js:5324:14)
+    at next (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/async/dist/async.js:5331:9)
+    at /Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/async/dist/async.js:969:16
+    at setProxy (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/lib/requester/request-wrapper.js:31:9)
+    at /Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/lib/requester/request-wrapper.js:76:13
+    at nextTask (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/async/dist/async.js:5324:14)
+    at Object.waterfall (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/async/dist/async.js:5334:5)
+
+---
+testScriptError: Unexpected token u in JSON at position 0
+---
+]]>
+    </system-err>
+  </testsuite>
+  <testsuite name="Authentication / MTD - Login" id="2a290127-94fd-4714-b0de-414b4a60aed2" timestamp="2020-03-17T15:19:49.925Z" tests="0" failures="0" errors="2" time="0.000">
+    <system-err>
+      <![CDATA[Iteration: 0
+RequestError: Error: Invalid URI "http:///%7B%7Bhost%7D%7D/api/v1/auth/login"
+    at Request.init (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/postman-request/request.js:344:31)
+    at new Request (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/postman-request/request.js:171:8)
+    at request (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/postman-request/index.js:47:10)
+    at /Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/lib/requester/request-wrapper.js:84:23
+    at /Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/async/dist/async.js:473:16
+    at next (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/async/dist/async.js:5329:29)
+    at /Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/async/dist/async.js:969:16
+    at setCertificate (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/lib/requester/request-wrapper.js:50:20)
+    at /Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/lib/requester/request-wrapper.js:79:13
+    at nextTask (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/async/dist/async.js:5324:14)
+    at next (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/async/dist/async.js:5331:9)
+    at /Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/async/dist/async.js:969:16
+    at setProxy (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/lib/requester/request-wrapper.js:31:9)
+    at /Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/lib/requester/request-wrapper.js:76:13
+    at nextTask (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/async/dist/async.js:5324:14)
+    at Object.waterfall (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/async/dist/async.js:5334:5)
+
+---
+testScriptError: Unexpected token u in JSON at position 0
+---
+]]>
+    </system-err>
+  </testsuite>
+  <testsuite name="Authentication / MTD - Logout" id="927f45bb-b42a-44b6-819c-26e0d057918f" timestamp="2020-03-17T15:19:49.925Z" tests="0" failures="0" errors="2" time="0.000">
+    <system-err>
+      <![CDATA[Iteration: 0
+RequestError: Error: Invalid URI "http:///%7B%7Bhost%7D%7D/api/v1/auth/logout"
+    at Request.init (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/postman-request/request.js:344:31)
+    at new Request (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/postman-request/request.js:171:8)
+    at request (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/postman-request/index.js:47:10)
+    at /Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/lib/requester/request-wrapper.js:84:23
+    at /Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/async/dist/async.js:473:16
+    at next (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/async/dist/async.js:5329:29)
+    at /Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/async/dist/async.js:969:16
+    at setCertificate (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/lib/requester/request-wrapper.js:50:20)
+    at /Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/lib/requester/request-wrapper.js:79:13
+    at nextTask (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/async/dist/async.js:5324:14)
+    at next (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/async/dist/async.js:5331:9)
+    at /Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/async/dist/async.js:969:16
+    at setProxy (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/lib/requester/request-wrapper.js:31:9)
+    at /Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/lib/requester/request-wrapper.js:76:13
+    at nextTask (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/async/dist/async.js:5324:14)
+    at Object.waterfall (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/async/dist/async.js:5334:5)
+
+---
+testScriptError: Unexpected token u in JSON at position 0
+---
+]]>
+    </system-err>
+  </testsuite>
+  <testsuite name="Authentication / MTD - Update Password" id="54320d98-a2a5-4340-a36d-88517cb6cb64" timestamp="2020-03-17T15:19:49.925Z" tests="3" failures="3" errors="1" time="0.000">
+    <system-err>
+      <![CDATA[Iteration: 0
+RequestError: Error: Invalid URI "http:///%7B%7Bhost%7D%7D/api/v1/auth/updatepassword"
+    at Request.init (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/postman-request/request.js:344:31)
+    at new Request (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/postman-request/request.js:171:8)
+    at request (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/postman-request/index.js:47:10)
+    at /Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/lib/requester/request-wrapper.js:84:23
+    at /Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/async/dist/async.js:473:16
+    at next (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/async/dist/async.js:5329:29)
+    at /Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/async/dist/async.js:969:16
+    at setCertificate (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/lib/requester/request-wrapper.js:50:20)
+    at /Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/lib/requester/request-wrapper.js:79:13
+    at nextTask (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/async/dist/async.js:5324:14)
+    at next (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/async/dist/async.js:5331:9)
+    at /Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/async/dist/async.js:969:16
+    at setProxy (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/lib/requester/request-wrapper.js:31:9)
+    at /Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/lib/requester/request-wrapper.js:76:13
+    at nextTask (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/async/dist/async.js:5324:14)
+    at Object.waterfall (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/async/dist/async.js:5334:5)
+
+---
+]]>
+    </system-err>
+    <testcase name="Response time is less than 200ms" time="0.000" classname="MoveTheDial">
+      <failure type="AssertionFailure" message="expected undefined to be a number or a date">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: 6532265c-05a5-44fb-879f-6f57d4d7d47b.]]>
+        <![CDATA[Collection name: MoveTheDial .]]>
+        <![CDATA[Request name: Authentication / MTD - Update Password.]]>
+        <![CDATA[Test description: Response time is less than 200ms.]]>
+        <![CDATA[Error message: expected undefined to be a number or a date.]]>
+        <![CDATA[Stacktrace: AssertionError: expected undefined to be a number or a date
+   at Object.eval sandbox-script.js:1:4).]]>
+      </failure>
+    </testcase>
+    <testcase name="Content-Type is present" time="0.000" classname="MoveTheDial">
+      <failure type="AssertionFailure" message="expected response to have header with key 'Content-Type'">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: 6532265c-05a5-44fb-879f-6f57d4d7d47b.]]>
+        <![CDATA[Collection name: MoveTheDial .]]>
+        <![CDATA[Request name: Authentication / MTD - Update Password.]]>
+        <![CDATA[Test description: Content-Type is present.]]>
+        <![CDATA[Error message: expected response to have header with key 'Content-Type'.]]>
+        <![CDATA[Stacktrace: AssertionError: expected response to have header with key 'Content-Type'
+   at Object.eval sandbox-script.js:2:4).]]>
+      </failure>
+    </testcase>
+    <testcase name="Status code is 200" time="0.000" classname="MoveTheDial">
+      <failure type="AssertionFailure" message="expected { Object (id, _details, ...) } to have property 'code'">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: 6532265c-05a5-44fb-879f-6f57d4d7d47b.]]>
+        <![CDATA[Collection name: MoveTheDial .]]>
+        <![CDATA[Request name: Authentication / MTD - Update Password.]]>
+        <![CDATA[Test description: Status code is 200.]]>
+        <![CDATA[Error message: expected { Object (id, _details, ...) } to have property 'code'.]]>
+        <![CDATA[Stacktrace: AssertionError: expected { Object (id, _details, ...) } to have property 'code'
+   at Object.eval sandbox-script.js:3:4).]]>
+      </failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="Authentication / MTD - User Status" id="a2690a36-d29f-4794-984c-37f019e4f17e" timestamp="2020-03-17T15:19:49.925Z" tests="1" failures="1" errors="1" time="0.000">
+    <system-err>
+      <![CDATA[Iteration: 0
+RequestError: Error: Invalid URI "http:///%7B%7Bhost%7D%7D/api/v1/auth/user-status"
+    at Request.init (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/postman-request/request.js:344:31)
+    at new Request (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/postman-request/request.js:171:8)
+    at request (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/postman-request/index.js:47:10)
+    at /Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/lib/requester/request-wrapper.js:84:23
+    at /Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/async/dist/async.js:473:16
+    at next (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/async/dist/async.js:5329:29)
+    at /Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/async/dist/async.js:969:16
+    at setCertificate (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/lib/requester/request-wrapper.js:50:20)
+    at /Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/lib/requester/request-wrapper.js:79:13
+    at nextTask (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/async/dist/async.js:5324:14)
+    at next (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/async/dist/async.js:5331:9)
+    at /Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/async/dist/async.js:969:16
+    at setProxy (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/lib/requester/request-wrapper.js:31:9)
+    at /Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/lib/requester/request-wrapper.js:76:13
+    at nextTask (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/async/dist/async.js:5324:14)
+    at Object.waterfall (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/async/dist/async.js:5334:5)
+
+---
+]]>
+    </system-err>
+    <testcase name="Response time is less than 200ms" time="0.000" classname="MoveTheDial">
+      <failure type="AssertionFailure" message="expected undefined to be a number or a date">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: 6532265c-05a5-44fb-879f-6f57d4d7d47b.]]>
+        <![CDATA[Collection name: MoveTheDial .]]>
+        <![CDATA[Request name: Authentication / MTD - User Status.]]>
+        <![CDATA[Test description: Response time is less than 200ms.]]>
+        <![CDATA[Error message: expected undefined to be a number or a date.]]>
+        <![CDATA[Stacktrace: AssertionError: expected undefined to be a number or a date
+   at Object.eval sandbox-script.js:1:5).]]>
+      </failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="Authentication / MTD - Forgot Password" id="62b63f21-73e2-48f3-9910-b69621f92355" timestamp="2020-03-17T15:19:49.925Z" tests="0" failures="0" errors="2" time="0.000">
+    <system-err>
+      <![CDATA[Iteration: 0
+RequestError: Error: Invalid URI "http:///%7B%7Bhost%7D%7D/api/v1/auth/forgot-password"
+    at Request.init (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/postman-request/request.js:344:31)
+    at new Request (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/postman-request/request.js:171:8)
+    at request (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/postman-request/index.js:47:10)
+    at /Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/lib/requester/request-wrapper.js:84:23
+    at /Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/async/dist/async.js:473:16
+    at next (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/async/dist/async.js:5329:29)
+    at /Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/async/dist/async.js:969:16
+    at setCertificate (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/lib/requester/request-wrapper.js:50:20)
+    at /Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/lib/requester/request-wrapper.js:79:13
+    at nextTask (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/async/dist/async.js:5324:14)
+    at next (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/async/dist/async.js:5331:9)
+    at /Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/async/dist/async.js:969:16
+    at setProxy (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/lib/requester/request-wrapper.js:31:9)
+    at /Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/lib/requester/request-wrapper.js:76:13
+    at nextTask (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/async/dist/async.js:5324:14)
+    at Object.waterfall (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/async/dist/async.js:5334:5)
+
+---
+testScriptError: Unexpected token u in JSON at position 0
+---
+]]>
+    </system-err>
+  </testsuite>
+  <testsuite name="Authentication / MTD - Check Reset Code isValid" id="89b72f4d-50d8-486d-9bbb-1fa0d0da39fb" timestamp="2020-03-17T15:19:49.925Z" tests="2" failures="2" errors="1" time="0.000">
+    <system-err>
+      <![CDATA[Iteration: 0
+RequestError: Error: Invalid URI "http:///%7B%7Bhost%7D%7D/api/v1/auth/reset-password?code=%7B%7Breset_code%7D%7D"
+    at Request.init (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/postman-request/request.js:344:31)
+    at new Request (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/postman-request/request.js:171:8)
+    at request (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/postman-request/index.js:47:10)
+    at /Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/lib/requester/request-wrapper.js:84:23
+    at /Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/async/dist/async.js:473:16
+    at next (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/async/dist/async.js:5329:29)
+    at /Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/async/dist/async.js:969:16
+    at setCertificate (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/lib/requester/request-wrapper.js:50:20)
+    at /Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/lib/requester/request-wrapper.js:79:13
+    at nextTask (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/async/dist/async.js:5324:14)
+    at next (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/async/dist/async.js:5331:9)
+    at /Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/async/dist/async.js:969:16
+    at setProxy (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/lib/requester/request-wrapper.js:31:9)
+    at /Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/lib/requester/request-wrapper.js:76:13
+    at nextTask (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/async/dist/async.js:5324:14)
+    at Object.waterfall (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/async/dist/async.js:5334:5)
+
+---
+]]>
+    </system-err>
+    <testcase name="Response time is less than 200ms" time="0.000" classname="MoveTheDial">
+      <failure type="AssertionFailure" message="expected undefined to be a number or a date">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: 6532265c-05a5-44fb-879f-6f57d4d7d47b.]]>
+        <![CDATA[Collection name: MoveTheDial .]]>
+        <![CDATA[Request name: Authentication / MTD - Check Reset Code isValid.]]>
+        <![CDATA[Test description: Response time is less than 200ms.]]>
+        <![CDATA[Error message: expected undefined to be a number or a date.]]>
+        <![CDATA[Stacktrace: AssertionError: expected undefined to be a number or a date
+   at Object.eval sandbox-script.js:1:7).]]>
+      </failure>
+    </testcase>
+    <testcase name="Status code is 200" time="0.000" classname="MoveTheDial">
+      <failure type="AssertionFailure" message="expected { Object (id, _details, ...) } to have property 'code'">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: 6532265c-05a5-44fb-879f-6f57d4d7d47b.]]>
+        <![CDATA[Collection name: MoveTheDial .]]>
+        <![CDATA[Request name: Authentication / MTD - Check Reset Code isValid.]]>
+        <![CDATA[Test description: Status code is 200.]]>
+        <![CDATA[Error message: expected { Object (id, _details, ...) } to have property 'code'.]]>
+        <![CDATA[Stacktrace: AssertionError: expected { Object (id, _details, ...) } to have property 'code'
+   at Object.eval sandbox-script.js:2:7).]]>
+      </failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="Authentication / MTD - Reset Password" id="02b6b6a5-ed74-49c1-a5de-337b9ee29da8" timestamp="2020-03-17T15:19:49.925Z" tests="1" failures="1" errors="1" time="0.000">
+    <system-err>
+      <![CDATA[Iteration: 0
+RequestError: Error: Invalid URI "http:///%7B%7Bhost%7D%7D/api/v1/auth/users/password"
+    at Request.init (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/postman-request/request.js:344:31)
+    at new Request (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/postman-request/request.js:171:8)
+    at request (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/postman-request/index.js:47:10)
+    at /Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/lib/requester/request-wrapper.js:84:23
+    at /Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/async/dist/async.js:473:16
+    at next (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/async/dist/async.js:5329:29)
+    at /Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/async/dist/async.js:969:16
+    at setCertificate (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/lib/requester/request-wrapper.js:50:20)
+    at /Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/lib/requester/request-wrapper.js:79:13
+    at nextTask (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/async/dist/async.js:5324:14)
+    at next (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/async/dist/async.js:5331:9)
+    at /Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/async/dist/async.js:969:16
+    at setProxy (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/lib/requester/request-wrapper.js:31:9)
+    at /Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/lib/requester/request-wrapper.js:76:13
+    at nextTask (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/async/dist/async.js:5324:14)
+    at Object.waterfall (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/async/dist/async.js:5334:5)
+
+---
+]]>
+    </system-err>
+    <testcase name="Status code is 200" time="0.000" classname="MoveTheDial">
+      <failure type="AssertionFailure" message="expected { Object (id, _details, ...) } to have property 'code'">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: 6532265c-05a5-44fb-879f-6f57d4d7d47b.]]>
+        <![CDATA[Collection name: MoveTheDial .]]>
+        <![CDATA[Request name: Authentication / MTD - Reset Password.]]>
+        <![CDATA[Test description: Status code is 200.]]>
+        <![CDATA[Error message: expected { Object (id, _details, ...) } to have property 'code'.]]>
+        <![CDATA[Stacktrace: AssertionError: expected { Object (id, _details, ...) } to have property 'code'
+   at Object.eval sandbox-script.js:1:8).]]>
+      </failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="Profile / MTD - Get User Profile" id="8d770708-4aa4-416b-bfbc-888ac8f2e233" timestamp="2020-03-17T15:19:49.925Z" tests="2" failures="2" errors="1" time="0.000">
+    <system-err>
+      <![CDATA[Iteration: 0
+RequestError: Error: Invalid URI "http:///%7B%7Bhost%7D%7D/api/v1/profile/info"
+    at Request.init (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/postman-request/request.js:344:31)
+    at new Request (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/postman-request/request.js:171:8)
+    at request (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/postman-request/index.js:47:10)
+    at /Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/lib/requester/request-wrapper.js:84:23
+    at /Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/async/dist/async.js:473:16
+    at next (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/async/dist/async.js:5329:29)
+    at /Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/async/dist/async.js:969:16
+    at setCertificate (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/lib/requester/request-wrapper.js:50:20)
+    at /Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/lib/requester/request-wrapper.js:79:13
+    at nextTask (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/async/dist/async.js:5324:14)
+    at next (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/async/dist/async.js:5331:9)
+    at /Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/async/dist/async.js:969:16
+    at setProxy (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/lib/requester/request-wrapper.js:31:9)
+    at /Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/lib/requester/request-wrapper.js:76:13
+    at nextTask (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/async/dist/async.js:5324:14)
+    at Object.waterfall (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/async/dist/async.js:5334:5)
+
+---
+]]>
+    </system-err>
+    <testcase name="Status code is 200" time="0.000" classname="MoveTheDial">
+      <failure type="AssertionFailure" message="expected { Object (id, _details, ...) } to have property 'code'">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: 6532265c-05a5-44fb-879f-6f57d4d7d47b.]]>
+        <![CDATA[Collection name: MoveTheDial .]]>
+        <![CDATA[Request name: Profile / MTD - Get User Profile.]]>
+        <![CDATA[Test description: Status code is 200.]]>
+        <![CDATA[Error message: expected { Object (id, _details, ...) } to have property 'code'.]]>
+        <![CDATA[Stacktrace: AssertionError: expected { Object (id, _details, ...) } to have property 'code'
+   at Object.eval sandbox-script.js:1:9).]]>
+      </failure>
+    </testcase>
+    <testcase name="Response time is less than 200ms" time="0.000" classname="MoveTheDial">
+      <failure type="AssertionFailure" message="expected undefined to be a number or a date">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: 6532265c-05a5-44fb-879f-6f57d4d7d47b.]]>
+        <![CDATA[Collection name: MoveTheDial .]]>
+        <![CDATA[Request name: Profile / MTD - Get User Profile.]]>
+        <![CDATA[Test description: Response time is less than 200ms.]]>
+        <![CDATA[Error message: expected undefined to be a number or a date.]]>
+        <![CDATA[Stacktrace: AssertionError: expected undefined to be a number or a date
+   at Object.eval sandbox-script.js:2:9).]]>
+      </failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="Profile / MTD - Update Names" id="8fbc347b-86bd-4ac8-a7b8-5039b146710a" timestamp="2020-03-17T15:19:49.925Z" tests="2" failures="2" errors="1" time="0.000">
+    <system-err>
+      <![CDATA[Iteration: 0
+RequestError: Error: Invalid URI "http:///%7B%7Bhost%7D%7D/api/v1/profile/update/names"
+    at Request.init (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/postman-request/request.js:344:31)
+    at new Request (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/postman-request/request.js:171:8)
+    at request (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/postman-request/index.js:47:10)
+    at /Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/lib/requester/request-wrapper.js:84:23
+    at /Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/async/dist/async.js:473:16
+    at next (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/async/dist/async.js:5329:29)
+    at /Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/async/dist/async.js:969:16
+    at setCertificate (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/lib/requester/request-wrapper.js:50:20)
+    at /Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/lib/requester/request-wrapper.js:79:13
+    at nextTask (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/async/dist/async.js:5324:14)
+    at next (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/async/dist/async.js:5331:9)
+    at /Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/async/dist/async.js:969:16
+    at setProxy (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/lib/requester/request-wrapper.js:31:9)
+    at /Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/lib/requester/request-wrapper.js:76:13
+    at nextTask (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/async/dist/async.js:5324:14)
+    at Object.waterfall (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/async/dist/async.js:5334:5)
+
+---
+]]>
+    </system-err>
+    <testcase name="Response time is less than 200ms" time="0.000" classname="MoveTheDial">
+      <failure type="AssertionFailure" message="expected undefined to be a number or a date">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: 6532265c-05a5-44fb-879f-6f57d4d7d47b.]]>
+        <![CDATA[Collection name: MoveTheDial .]]>
+        <![CDATA[Request name: Profile / MTD - Update Names.]]>
+        <![CDATA[Test description: Response time is less than 200ms.]]>
+        <![CDATA[Error message: expected undefined to be a number or a date.]]>
+        <![CDATA[Stacktrace: AssertionError: expected undefined to be a number or a date
+   at Object.eval sandbox-script.js:1:10).]]>
+      </failure>
+    </testcase>
+    <testcase name="Status code is 200" time="0.000" classname="MoveTheDial">
+      <failure type="AssertionFailure" message="expected { Object (id, _details, ...) } to have property 'code'">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: 6532265c-05a5-44fb-879f-6f57d4d7d47b.]]>
+        <![CDATA[Collection name: MoveTheDial .]]>
+        <![CDATA[Request name: Profile / MTD - Update Names.]]>
+        <![CDATA[Test description: Status code is 200.]]>
+        <![CDATA[Error message: expected { Object (id, _details, ...) } to have property 'code'.]]>
+        <![CDATA[Stacktrace: AssertionError: expected { Object (id, _details, ...) } to have property 'code'
+   at Object.eval sandbox-script.js:2:10).]]>
+      </failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="Profile / MTD - Update People and Job Title" id="c2aefb8e-3d43-48e9-b940-1f4e9329482e" timestamp="2020-03-17T15:19:49.925Z" tests="3" failures="3" errors="1" time="0.000">
+    <system-err>
+      <![CDATA[Iteration: 0
+RequestError: Error: Invalid URI "http:///%7B%7Bhost%7D%7D/api/v1/profile/update/people"
+    at Request.init (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/postman-request/request.js:344:31)
+    at new Request (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/postman-request/request.js:171:8)
+    at request (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/postman-request/index.js:47:10)
+    at /Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/lib/requester/request-wrapper.js:84:23
+    at /Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/async/dist/async.js:473:16
+    at next (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/async/dist/async.js:5329:29)
+    at /Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/async/dist/async.js:969:16
+    at setCertificate (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/lib/requester/request-wrapper.js:50:20)
+    at /Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/lib/requester/request-wrapper.js:79:13
+    at nextTask (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/async/dist/async.js:5324:14)
+    at next (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/async/dist/async.js:5331:9)
+    at /Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/async/dist/async.js:969:16
+    at setProxy (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/lib/requester/request-wrapper.js:31:9)
+    at /Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/lib/requester/request-wrapper.js:76:13
+    at nextTask (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/async/dist/async.js:5324:14)
+    at Object.waterfall (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/async/dist/async.js:5334:5)
+
+---
+]]>
+    </system-err>
+    <testcase name="Status code is 200" time="0.000" classname="MoveTheDial">
+      <failure type="AssertionFailure" message="expected { Object (id, _details, ...) } to have property 'code'">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: 6532265c-05a5-44fb-879f-6f57d4d7d47b.]]>
+        <![CDATA[Collection name: MoveTheDial .]]>
+        <![CDATA[Request name: Profile / MTD - Update People and Job Title.]]>
+        <![CDATA[Test description: Status code is 200.]]>
+        <![CDATA[Error message: expected { Object (id, _details, ...) } to have property 'code'.]]>
+        <![CDATA[Stacktrace: AssertionError: expected { Object (id, _details, ...) } to have property 'code'
+   at Object.eval sandbox-script.js:1:11).]]>
+      </failure>
+    </testcase>
+    <testcase name="Response time is less than 200ms" time="0.000" classname="MoveTheDial">
+      <failure type="AssertionFailure" message="expected undefined to be a number or a date">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: 6532265c-05a5-44fb-879f-6f57d4d7d47b.]]>
+        <![CDATA[Collection name: MoveTheDial .]]>
+        <![CDATA[Request name: Profile / MTD - Update People and Job Title.]]>
+        <![CDATA[Test description: Response time is less than 200ms.]]>
+        <![CDATA[Error message: expected undefined to be a number or a date.]]>
+        <![CDATA[Stacktrace: AssertionError: expected undefined to be a number or a date
+   at Object.eval sandbox-script.js:2:11).]]>
+      </failure>
+    </testcase>
+    <testcase name="Content-Type is present" time="0.000" classname="MoveTheDial">
+      <failure type="AssertionFailure" message="expected response to have header with key 'Content-Type'">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: 6532265c-05a5-44fb-879f-6f57d4d7d47b.]]>
+        <![CDATA[Collection name: MoveTheDial .]]>
+        <![CDATA[Request name: Profile / MTD - Update People and Job Title.]]>
+        <![CDATA[Test description: Content-Type is present.]]>
+        <![CDATA[Error message: expected response to have header with key 'Content-Type'.]]>
+        <![CDATA[Stacktrace: AssertionError: expected response to have header with key 'Content-Type'
+   at Object.eval sandbox-script.js:3:11).]]>
+      </failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="Profile / MTD - Update Bio" id="91a7454e-f811-430b-a4ca-786356d1aaf0" timestamp="2020-03-17T15:19:49.925Z" tests="2" failures="2" errors="1" time="0.000">
+    <system-err>
+      <![CDATA[Iteration: 0
+RequestError: Error: Invalid URI "http:///%7B%7Bhost%7D%7D/api/v1/profile/update/bio"
+    at Request.init (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/postman-request/request.js:344:31)
+    at new Request (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/postman-request/request.js:171:8)
+    at request (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/postman-request/index.js:47:10)
+    at /Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/lib/requester/request-wrapper.js:84:23
+    at /Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/async/dist/async.js:473:16
+    at next (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/async/dist/async.js:5329:29)
+    at /Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/async/dist/async.js:969:16
+    at setCertificate (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/lib/requester/request-wrapper.js:50:20)
+    at /Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/lib/requester/request-wrapper.js:79:13
+    at nextTask (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/async/dist/async.js:5324:14)
+    at next (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/async/dist/async.js:5331:9)
+    at /Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/async/dist/async.js:969:16
+    at setProxy (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/lib/requester/request-wrapper.js:31:9)
+    at /Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/lib/requester/request-wrapper.js:76:13
+    at nextTask (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/async/dist/async.js:5324:14)
+    at Object.waterfall (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/async/dist/async.js:5334:5)
+
+---
+]]>
+    </system-err>
+    <testcase name="Status code is 200" time="0.000" classname="MoveTheDial">
+      <failure type="AssertionFailure" message="expected { Object (id, _details, ...) } to have property 'code'">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: 6532265c-05a5-44fb-879f-6f57d4d7d47b.]]>
+        <![CDATA[Collection name: MoveTheDial .]]>
+        <![CDATA[Request name: Profile / MTD - Update Bio.]]>
+        <![CDATA[Test description: Status code is 200.]]>
+        <![CDATA[Error message: expected { Object (id, _details, ...) } to have property 'code'.]]>
+        <![CDATA[Stacktrace: AssertionError: expected { Object (id, _details, ...) } to have property 'code'
+   at Object.eval sandbox-script.js:1:12).]]>
+      </failure>
+    </testcase>
+    <testcase name="Response time is less than 200ms" time="0.000" classname="MoveTheDial">
+      <failure type="AssertionFailure" message="expected undefined to be a number or a date">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: 6532265c-05a5-44fb-879f-6f57d4d7d47b.]]>
+        <![CDATA[Collection name: MoveTheDial .]]>
+        <![CDATA[Request name: Profile / MTD - Update Bio.]]>
+        <![CDATA[Test description: Response time is less than 200ms.]]>
+        <![CDATA[Error message: expected undefined to be a number or a date.]]>
+        <![CDATA[Stacktrace: AssertionError: expected undefined to be a number or a date
+   at Object.eval sandbox-script.js:2:12).]]>
+      </failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="Profile / MTD - Update Image" id="10d9d9f5-fbf1-4dda-934f-8f9769953f5d" timestamp="2020-03-17T15:19:49.925Z" tests="2" failures="2" errors="1" time="0.000">
+    <system-err>
+      <![CDATA[Iteration: 0
+RequestError: Error: Invalid URI "http:///%7B%7Bhost%7D%7D/api/v1/profile/update/image"
+    at Request.init (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/postman-request/request.js:344:31)
+    at new Request (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/postman-request/request.js:171:8)
+    at request (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/postman-request/index.js:47:10)
+    at /Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/lib/requester/request-wrapper.js:84:23
+    at /Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/async/dist/async.js:473:16
+    at next (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/async/dist/async.js:5329:29)
+    at /Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/async/dist/async.js:969:16
+    at setCertificate (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/lib/requester/request-wrapper.js:50:20)
+    at /Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/lib/requester/request-wrapper.js:79:13
+    at nextTask (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/async/dist/async.js:5324:14)
+    at next (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/async/dist/async.js:5331:9)
+    at /Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/async/dist/async.js:969:16
+    at setProxy (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/lib/requester/request-wrapper.js:31:9)
+    at /Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/lib/requester/request-wrapper.js:76:13
+    at nextTask (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/async/dist/async.js:5324:14)
+    at Object.waterfall (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/async/dist/async.js:5334:5)
+
+---
+]]>
+    </system-err>
+    <testcase name="Status code is 200" time="0.000" classname="MoveTheDial">
+      <failure type="AssertionFailure" message="expected { Object (id, _details, ...) } to have property 'code'">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: 6532265c-05a5-44fb-879f-6f57d4d7d47b.]]>
+        <![CDATA[Collection name: MoveTheDial .]]>
+        <![CDATA[Request name: Profile / MTD - Update Image.]]>
+        <![CDATA[Test description: Status code is 200.]]>
+        <![CDATA[Error message: expected { Object (id, _details, ...) } to have property 'code'.]]>
+        <![CDATA[Stacktrace: AssertionError: expected { Object (id, _details, ...) } to have property 'code'
+   at Object.eval sandbox-script.js:1:13).]]>
+      </failure>
+    </testcase>
+    <testcase name="Successful POST request" time="0.000" classname="MoveTheDial">
+      <failure type="AssertionFailure" message="expected undefined to be one of [ 201, 202 ]">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: 6532265c-05a5-44fb-879f-6f57d4d7d47b.]]>
+        <![CDATA[Collection name: MoveTheDial .]]>
+        <![CDATA[Request name: Profile / MTD - Update Image.]]>
+        <![CDATA[Test description: Successful POST request.]]>
+        <![CDATA[Error message: expected undefined to be one of [ 201, 202 ].]]>
+        <![CDATA[Stacktrace: AssertionError: expected undefined to be one of [ 201, 202 ]
+   at Object.eval sandbox-script.js:2:13).]]>
+      </failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="Profile / MTD - Update the password" id="89125007-cfe6-4a39-a2e0-20b92f60e402" timestamp="2020-03-17T15:19:49.925Z" tests="1" failures="1" errors="1" time="0.000">
+    <system-err>
+      <![CDATA[Iteration: 0
+RequestError: Error: Invalid URI "http:///%7B%7Bhost%7D%7D/api/v1/profile/update/password"
+    at Request.init (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/postman-request/request.js:344:31)
+    at new Request (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/postman-request/request.js:171:8)
+    at request (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/postman-request/index.js:47:10)
+    at /Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/lib/requester/request-wrapper.js:84:23
+    at /Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/async/dist/async.js:473:16
+    at next (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/async/dist/async.js:5329:29)
+    at /Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/async/dist/async.js:969:16
+    at setCertificate (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/lib/requester/request-wrapper.js:50:20)
+    at /Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/lib/requester/request-wrapper.js:79:13
+    at nextTask (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/async/dist/async.js:5324:14)
+    at next (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/async/dist/async.js:5331:9)
+    at /Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/async/dist/async.js:969:16
+    at setProxy (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/lib/requester/request-wrapper.js:31:9)
+    at /Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/lib/requester/request-wrapper.js:76:13
+    at nextTask (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/async/dist/async.js:5324:14)
+    at Object.waterfall (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/async/dist/async.js:5334:5)
+
+---
+]]>
+    </system-err>
+    <testcase name="Status code is 200" time="0.000" classname="MoveTheDial">
+      <failure type="AssertionFailure" message="expected { Object (id, _details, ...) } to have property 'code'">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: 6532265c-05a5-44fb-879f-6f57d4d7d47b.]]>
+        <![CDATA[Collection name: MoveTheDial .]]>
+        <![CDATA[Request name: Profile / MTD - Update the password.]]>
+        <![CDATA[Test description: Status code is 200.]]>
+        <![CDATA[Error message: expected { Object (id, _details, ...) } to have property 'code'.]]>
+        <![CDATA[Stacktrace: AssertionError: expected { Object (id, _details, ...) } to have property 'code'
+   at Object.eval sandbox-script.js:1:14).]]>
+      </failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="Profile / MTD - Update the email" id="f9387905-65f5-4517-9b22-03671684528a" timestamp="2020-03-17T15:19:49.925Z" tests="1" failures="1" errors="1" time="0.000">
+    <system-err>
+      <![CDATA[Iteration: 0
+RequestError: Error: Invalid URI "http:///%7B%7Bhost%7D%7D/api/v1/profile/update/email"
+    at Request.init (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/postman-request/request.js:344:31)
+    at new Request (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/postman-request/request.js:171:8)
+    at request (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/postman-request/index.js:47:10)
+    at /Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/lib/requester/request-wrapper.js:84:23
+    at /Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/async/dist/async.js:473:16
+    at next (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/async/dist/async.js:5329:29)
+    at /Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/async/dist/async.js:969:16
+    at setCertificate (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/lib/requester/request-wrapper.js:50:20)
+    at /Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/lib/requester/request-wrapper.js:79:13
+    at nextTask (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/async/dist/async.js:5324:14)
+    at next (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/async/dist/async.js:5331:9)
+    at /Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/async/dist/async.js:969:16
+    at setProxy (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/lib/requester/request-wrapper.js:31:9)
+    at /Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/lib/requester/request-wrapper.js:76:13
+    at nextTask (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/async/dist/async.js:5324:14)
+    at Object.waterfall (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/async/dist/async.js:5334:5)
+
+---
+]]>
+    </system-err>
+    <testcase name="Status code is 200" time="0.000" classname="MoveTheDial">
+      <failure type="AssertionFailure" message="expected { Object (id, _details, ...) } to have property 'code'">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: 6532265c-05a5-44fb-879f-6f57d4d7d47b.]]>
+        <![CDATA[Collection name: MoveTheDial .]]>
+        <![CDATA[Request name: Profile / MTD - Update the email.]]>
+        <![CDATA[Test description: Status code is 200.]]>
+        <![CDATA[Error message: expected { Object (id, _details, ...) } to have property 'code'.]]>
+        <![CDATA[Stacktrace: AssertionError: expected { Object (id, _details, ...) } to have property 'code'
+   at Object.eval sandbox-script.js:1:15).]]>
+      </failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="Account / MTD - Create new issue" id="f4cf0335-74a8-4853-b684-4959a678b797" timestamp="2020-03-17T15:19:49.925Z" tests="1" failures="1" errors="1" time="0.000">
+    <system-err>
+      <![CDATA[Iteration: 0
+RequestError: Error: Invalid URI "http:///%7B%7Bhost%7D%7D/api/v1/account/new"
+    at Request.init (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/postman-request/request.js:344:31)
+    at new Request (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/postman-request/request.js:171:8)
+    at request (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/postman-request/index.js:47:10)
+    at /Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/lib/requester/request-wrapper.js:84:23
+    at /Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/async/dist/async.js:473:16
+    at next (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/async/dist/async.js:5329:29)
+    at /Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/async/dist/async.js:969:16
+    at setCertificate (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/lib/requester/request-wrapper.js:50:20)
+    at /Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/lib/requester/request-wrapper.js:79:13
+    at nextTask (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/async/dist/async.js:5324:14)
+    at next (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/async/dist/async.js:5331:9)
+    at /Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/async/dist/async.js:969:16
+    at setProxy (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/lib/requester/request-wrapper.js:31:9)
+    at /Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/lib/requester/request-wrapper.js:76:13
+    at nextTask (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/async/dist/async.js:5324:14)
+    at Object.waterfall (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/async/dist/async.js:5334:5)
+
+---
+]]>
+    </system-err>
+    <testcase name="Status code is 200" time="0.000" classname="MoveTheDial">
+      <failure type="AssertionFailure" message="expected { Object (id, _details, ...) } to have property 'code'">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: 6532265c-05a5-44fb-879f-6f57d4d7d47b.]]>
+        <![CDATA[Collection name: MoveTheDial .]]>
+        <![CDATA[Request name: Account / MTD - Create new issue.]]>
+        <![CDATA[Test description: Status code is 200.]]>
+        <![CDATA[Error message: expected { Object (id, _details, ...) } to have property 'code'.]]>
+        <![CDATA[Stacktrace: AssertionError: expected { Object (id, _details, ...) } to have property 'code'
+   at Object.eval sandbox-script.js:1:16).]]>
+      </failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="Account / MTD - Get Issue by Id" id="60073ff9-89fc-49d7-920d-a6285bfee9ae" timestamp="2020-03-17T15:19:49.925Z" tests="1" failures="1" errors="1" time="0.000">
+    <system-err>
+      <![CDATA[Iteration: 0
+RequestError: Error: Invalid URI "http:///%7B%7Bhost%7D%7D/api/v1/account/info"
+    at Request.init (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/postman-request/request.js:344:31)
+    at new Request (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/postman-request/request.js:171:8)
+    at request (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/postman-request/index.js:47:10)
+    at /Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/lib/requester/request-wrapper.js:84:23
+    at /Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/async/dist/async.js:473:16
+    at next (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/async/dist/async.js:5329:29)
+    at /Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/async/dist/async.js:969:16
+    at setCertificate (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/lib/requester/request-wrapper.js:50:20)
+    at /Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/lib/requester/request-wrapper.js:79:13
+    at nextTask (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/async/dist/async.js:5324:14)
+    at next (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/async/dist/async.js:5331:9)
+    at /Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/async/dist/async.js:969:16
+    at setProxy (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/lib/requester/request-wrapper.js:31:9)
+    at /Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/lib/requester/request-wrapper.js:76:13
+    at nextTask (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/async/dist/async.js:5324:14)
+    at Object.waterfall (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/async/dist/async.js:5334:5)
+
+---
+]]>
+    </system-err>
+    <testcase name="Status code is 200" time="0.000" classname="MoveTheDial">
+      <failure type="AssertionFailure" message="expected { Object (id, _details, ...) } to have property 'code'">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: 6532265c-05a5-44fb-879f-6f57d4d7d47b.]]>
+        <![CDATA[Collection name: MoveTheDial .]]>
+        <![CDATA[Request name: Account / MTD - Get Issue by Id.]]>
+        <![CDATA[Test description: Status code is 200.]]>
+        <![CDATA[Error message: expected { Object (id, _details, ...) } to have property 'code'.]]>
+        <![CDATA[Stacktrace: AssertionError: expected { Object (id, _details, ...) } to have property 'code'
+   at Object.eval sandbox-script.js:1:17).]]>
+      </failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="Goal / MTD - Initialze Goal Entry" id="ad758b64-8b62-4d6f-8661-8edc47dc440f" timestamp="2020-03-17T15:19:49.925Z" tests="1" failures="1" errors="1" time="0.000">
+    <system-err>
+      <![CDATA[Iteration: 0
+RequestError: Error: Invalid URI "http:///%7B%7Bhost%7D%7D/api/v1/goal/initialize"
+    at Request.init (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/postman-request/request.js:344:31)
+    at new Request (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/postman-request/request.js:171:8)
+    at request (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/postman-request/index.js:47:10)
+    at /Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/lib/requester/request-wrapper.js:84:23
+    at /Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/async/dist/async.js:473:16
+    at next (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/async/dist/async.js:5329:29)
+    at /Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/async/dist/async.js:969:16
+    at setCertificate (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/lib/requester/request-wrapper.js:50:20)
+    at /Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/lib/requester/request-wrapper.js:79:13
+    at nextTask (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/async/dist/async.js:5324:14)
+    at next (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/async/dist/async.js:5331:9)
+    at /Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/async/dist/async.js:969:16
+    at setProxy (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/lib/requester/request-wrapper.js:31:9)
+    at /Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/lib/requester/request-wrapper.js:76:13
+    at nextTask (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/async/dist/async.js:5324:14)
+    at Object.waterfall (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/async/dist/async.js:5334:5)
+
+---
+]]>
+    </system-err>
+    <testcase name="Status code is 200" time="0.000" classname="MoveTheDial">
+      <failure type="AssertionFailure" message="expected { Object (id, _details, ...) } to have property 'code'">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: 6532265c-05a5-44fb-879f-6f57d4d7d47b.]]>
+        <![CDATA[Collection name: MoveTheDial .]]>
+        <![CDATA[Request name: Goal / MTD - Initialze Goal Entry.]]>
+        <![CDATA[Test description: Status code is 200.]]>
+        <![CDATA[Error message: expected { Object (id, _details, ...) } to have property 'code'.]]>
+        <![CDATA[Stacktrace: AssertionError: expected { Object (id, _details, ...) } to have property 'code'
+   at Object.eval sandbox-script.js:1:18).]]>
+      </failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="Goal / MTD - Get Goal Information" id="71b7bc79-a8ba-48a3-bc1b-118f3a69a86c" timestamp="2020-03-17T15:19:49.925Z" tests="1" failures="1" errors="1" time="0.000">
+    <system-err>
+      <![CDATA[Iteration: 0
+RequestError: Error: Invalid URI "http:///%7B%7Bhost%7D%7D/api/v1/goal/info"
+    at Request.init (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/postman-request/request.js:344:31)
+    at new Request (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/postman-request/request.js:171:8)
+    at request (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/postman-request/index.js:47:10)
+    at /Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/lib/requester/request-wrapper.js:84:23
+    at /Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/async/dist/async.js:473:16
+    at next (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/async/dist/async.js:5329:29)
+    at /Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/async/dist/async.js:969:16
+    at setCertificate (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/lib/requester/request-wrapper.js:50:20)
+    at /Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/lib/requester/request-wrapper.js:79:13
+    at nextTask (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/async/dist/async.js:5324:14)
+    at next (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/async/dist/async.js:5331:9)
+    at /Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/async/dist/async.js:969:16
+    at setProxy (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/lib/requester/request-wrapper.js:31:9)
+    at /Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/lib/requester/request-wrapper.js:76:13
+    at nextTask (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/async/dist/async.js:5324:14)
+    at Object.waterfall (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/async/dist/async.js:5334:5)
+
+---
+]]>
+    </system-err>
+    <testcase name="Status code is 200" time="0.000" classname="MoveTheDial">
+      <failure type="AssertionFailure" message="expected { Object (id, _details, ...) } to have property 'code'">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: 6532265c-05a5-44fb-879f-6f57d4d7d47b.]]>
+        <![CDATA[Collection name: MoveTheDial .]]>
+        <![CDATA[Request name: Goal / MTD - Get Goal Information.]]>
+        <![CDATA[Test description: Status code is 200.]]>
+        <![CDATA[Error message: expected { Object (id, _details, ...) } to have property 'code'.]]>
+        <![CDATA[Stacktrace: AssertionError: expected { Object (id, _details, ...) } to have property 'code'
+   at Object.eval sandbox-script.js:1:19).]]>
+      </failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="Goal / MTD - Update Goal Title" id="f9b90ad8-678d-4003-88bb-20d9ac233867" timestamp="2020-03-17T15:19:49.925Z" tests="1" failures="1" errors="1" time="0.000">
+    <system-err>
+      <![CDATA[Iteration: 0
+RequestError: Error: Invalid URI "http:///%7B%7Bhost%7D%7D/api/v1/goal/update-title"
+    at Request.init (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/postman-request/request.js:344:31)
+    at new Request (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/postman-request/request.js:171:8)
+    at request (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/postman-request/index.js:47:10)
+    at /Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/lib/requester/request-wrapper.js:84:23
+    at /Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/async/dist/async.js:473:16
+    at next (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/async/dist/async.js:5329:29)
+    at /Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/async/dist/async.js:969:16
+    at setCertificate (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/lib/requester/request-wrapper.js:50:20)
+    at /Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/lib/requester/request-wrapper.js:79:13
+    at nextTask (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/async/dist/async.js:5324:14)
+    at next (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/async/dist/async.js:5331:9)
+    at /Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/async/dist/async.js:969:16
+    at setProxy (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/lib/requester/request-wrapper.js:31:9)
+    at /Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/lib/requester/request-wrapper.js:76:13
+    at nextTask (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/async/dist/async.js:5324:14)
+    at Object.waterfall (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/async/dist/async.js:5334:5)
+
+---
+]]>
+    </system-err>
+    <testcase name="Status code is 200" time="0.000" classname="MoveTheDial">
+      <failure type="AssertionFailure" message="expected { Object (id, _details, ...) } to have property 'code'">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: 6532265c-05a5-44fb-879f-6f57d4d7d47b.]]>
+        <![CDATA[Collection name: MoveTheDial .]]>
+        <![CDATA[Request name: Goal / MTD - Update Goal Title.]]>
+        <![CDATA[Test description: Status code is 200.]]>
+        <![CDATA[Error message: expected { Object (id, _details, ...) } to have property 'code'.]]>
+        <![CDATA[Stacktrace: AssertionError: expected { Object (id, _details, ...) } to have property 'code'
+   at Object.eval sandbox-script.js:1:20).]]>
+      </failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="Goal / MTD - Update Goal Type" id="a1f6d8c5-d2e0-474c-a0e6-f21dda35b307" timestamp="2020-03-17T15:19:49.925Z" tests="1" failures="1" errors="1" time="0.000">
+    <system-err>
+      <![CDATA[Iteration: 0
+RequestError: Error: Invalid URI "http:///%7B%7Bhost%7D%7D/api/v1/goal/update-type"
+    at Request.init (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/postman-request/request.js:344:31)
+    at new Request (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/postman-request/request.js:171:8)
+    at request (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/postman-request/index.js:47:10)
+    at /Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/lib/requester/request-wrapper.js:84:23
+    at /Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/async/dist/async.js:473:16
+    at next (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/async/dist/async.js:5329:29)
+    at /Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/async/dist/async.js:969:16
+    at setCertificate (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/lib/requester/request-wrapper.js:50:20)
+    at /Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/lib/requester/request-wrapper.js:79:13
+    at nextTask (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/async/dist/async.js:5324:14)
+    at next (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/async/dist/async.js:5331:9)
+    at /Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/async/dist/async.js:969:16
+    at setProxy (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/lib/requester/request-wrapper.js:31:9)
+    at /Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/lib/requester/request-wrapper.js:76:13
+    at nextTask (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/async/dist/async.js:5324:14)
+    at Object.waterfall (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/async/dist/async.js:5334:5)
+
+---
+]]>
+    </system-err>
+    <testcase name="Status code is 200" time="0.000" classname="MoveTheDial">
+      <failure type="AssertionFailure" message="expected { Object (id, _details, ...) } to have property 'code'">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: 6532265c-05a5-44fb-879f-6f57d4d7d47b.]]>
+        <![CDATA[Collection name: MoveTheDial .]]>
+        <![CDATA[Request name: Goal / MTD - Update Goal Type.]]>
+        <![CDATA[Test description: Status code is 200.]]>
+        <![CDATA[Error message: expected { Object (id, _details, ...) } to have property 'code'.]]>
+        <![CDATA[Stacktrace: AssertionError: expected { Object (id, _details, ...) } to have property 'code'
+   at Object.eval sandbox-script.js:1:21).]]>
+      </failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="Goal / MTD - Update Mentorship Type" id="b4bdc73a-c40b-4eb2-9732-704cd06f10d0" timestamp="2020-03-17T15:19:49.925Z" tests="1" failures="1" errors="1" time="0.000">
+    <system-err>
+      <![CDATA[Iteration: 0
+RequestError: Error: Invalid URI "http:///%7B%7Bhost%7D%7D/api/v1/goal/mentorship-type"
+    at Request.init (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/postman-request/request.js:344:31)
+    at new Request (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/postman-request/request.js:171:8)
+    at request (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/postman-request/index.js:47:10)
+    at /Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/lib/requester/request-wrapper.js:84:23
+    at /Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/async/dist/async.js:473:16
+    at next (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/async/dist/async.js:5329:29)
+    at /Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/async/dist/async.js:969:16
+    at setCertificate (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/lib/requester/request-wrapper.js:50:20)
+    at /Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/lib/requester/request-wrapper.js:79:13
+    at nextTask (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/async/dist/async.js:5324:14)
+    at next (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/async/dist/async.js:5331:9)
+    at /Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/async/dist/async.js:969:16
+    at setProxy (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/lib/requester/request-wrapper.js:31:9)
+    at /Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/lib/requester/request-wrapper.js:76:13
+    at nextTask (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/async/dist/async.js:5324:14)
+    at Object.waterfall (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/async/dist/async.js:5334:5)
+
+---
+]]>
+    </system-err>
+    <testcase name="Status code is 200" time="0.000" classname="MoveTheDial">
+      <failure type="AssertionFailure" message="expected { Object (id, _details, ...) } to have property 'code'">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: 6532265c-05a5-44fb-879f-6f57d4d7d47b.]]>
+        <![CDATA[Collection name: MoveTheDial .]]>
+        <![CDATA[Request name: Goal / MTD - Update Mentorship Type.]]>
+        <![CDATA[Test description: Status code is 200.]]>
+        <![CDATA[Error message: expected { Object (id, _details, ...) } to have property 'code'.]]>
+        <![CDATA[Stacktrace: AssertionError: expected { Object (id, _details, ...) } to have property 'code'
+   at Object.eval sandbox-script.js:1:22).]]>
+      </failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="MTD - Ping" id="53429e0c-6433-48a5-b332-f78b225a8857" timestamp="2020-03-17T15:19:49.925Z" tests="1" failures="1" errors="1" time="0.000">
+    <system-err>
+      <![CDATA[Iteration: 0
+RequestError: Error: Invalid URI "http:///%7B%7Bhost%7D%7D/ping"
+    at Request.init (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/postman-request/request.js:344:31)
+    at new Request (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/postman-request/request.js:171:8)
+    at request (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/postman-request/index.js:47:10)
+    at /Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/lib/requester/request-wrapper.js:84:23
+    at /Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/async/dist/async.js:473:16
+    at next (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/async/dist/async.js:5329:29)
+    at /Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/async/dist/async.js:969:16
+    at setCertificate (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/lib/requester/request-wrapper.js:50:20)
+    at /Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/lib/requester/request-wrapper.js:79:13
+    at nextTask (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/async/dist/async.js:5324:14)
+    at next (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/async/dist/async.js:5331:9)
+    at /Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/async/dist/async.js:969:16
+    at setProxy (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/lib/requester/request-wrapper.js:31:9)
+    at /Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/lib/requester/request-wrapper.js:76:13
+    at nextTask (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/async/dist/async.js:5324:14)
+    at Object.waterfall (/Users/thandoncube/Documents/mtd_backend/node_modules/postman-runtime/node_modules/async/dist/async.js:5334:5)
+
+---
+]]>
+    </system-err>
+    <testcase name="Status code is 200" time="0.000" classname="MoveTheDial">
+      <failure type="AssertionFailure" message="expected { Object (id, _details, ...) } to have property 'code'">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: 6532265c-05a5-44fb-879f-6f57d4d7d47b.]]>
+        <![CDATA[Collection name: MoveTheDial .]]>
+        <![CDATA[Request name: MTD - Ping.]]>
+        <![CDATA[Test description: Status code is 200.]]>
+        <![CDATA[Error message: expected { Object (id, _details, ...) } to have property 'code'.]]>
+        <![CDATA[Stacktrace: AssertionError: expected { Object (id, _details, ...) } to have property 'code'
+   at Object.eval sandbox-script.js:1:23).]]>
+      </failure>
+    </testcase>
+  </testsuite>
+</testsuites>

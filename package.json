@@ -1,0 +1,79 @@
+{
+    "name": "mtd_backend",
+    "version": "1.0.0",
+    "description": "\"This is the #MoveTheDial Nodejs backend for the B2B Platform\"",
+    "main": "index.js",
+    "scripts": {
+        "build": "babel -d ./build ./server -s",
+        "clean": "rimraf ./build",
+        "prettier": "prettier --write \"./**/*.{js,jsx,json}\"",
+        "dev:test": "npm test",
+        "prod:test": "CI=true npm test",
+        "test": "jest --detectOpenHandles",
+        "test:watch": "jest --watch",
+        "test:coverage": "jest --coverage",
+        "server": "node index",
+        "server:prod": "pm2 start ./index.js --watch",
+        "server:prod:stop": "pm2 stop ./index.js 0 --watch",
+        "local": "npm run build && pm2 start ./index.js --watch",
+        "local:stop": "pm2 stop ./index.js 0 --watch",
+        "start": "npm run server:prod",
+        "dev": "npm run prettier && npm run dev:test && npm run local",
+        "dev:restart": "npm run build && pm2 stop 0 ./index.js && pm2 start ./index.js --watch",
+        "prod": "npm run server:prod",
+        "watch": "npm run build && nodemon --watch"
+    },
+    "keywords": [
+        "MTDApp",
+        "MoveTheDial_B2B",
+        "mtd_b2b",
+        "movethedial",
+        "movethedial_app"
+    ],
+    "husky": {
+        "hooks": {
+            "pre-commit": "CI=true npm run test",
+            "pre-push": "sh ./scripts/version-bump.sh"
+        }
+    },
+    "author": "MoveTheDial Dev Team",
+    "license": "ISC",
+    "dependencies": {
+        "@hapi/joi": "^17.1.0",
+        "@sendgrid/mail": "^6.5.1",
+        "aws-sdk": "^2.627.0",
+        "bcrypt": "^3.0.7",
+        "body-parser": "^1.19.0",
+        "dotenv": "^8.2.0",
+        "express": "^4.17.1",
+        "express-pino-logger": "^4.0.0",
+        "husky": "^4.2.1",
+        "jsonwebtoken": "^8.5.1",
+        "knex": "^0.20.8",
+        "lodash": "^4.17.15",
+        "moment": "^2.24.0",
+        "morgan": "^1.9.1",
+        "multer": "^1.4.2",
+        "multer-s3": "^2.9.0",
+        "node-fetch": "^2.6.0",
+        "npm-run-all": "^4.1.5",
+        "pg": "^7.17.1",
+        "pino": "^5.16.0",
+        "pino-pretty": "^3.5.0",
+        "regenerator-runtime": "^0.13.3"
+    },
+    "devDependencies": {
+        "@babel/cli": "^7.8.3",
+        "@babel/core": "^7.8.3",
+        "@babel/node": "^7.8.3",
+        "@babel/preset-env": "^7.8.3",
+        "babel-node": "0.0.1-security",
+        "coveralls": "^3.0.9",
+        "husky": "^4.2.1",
+        "jest": "^24.9.0",
+        "lint-staged": "^10.0.1",
+        "newman-stub": "^2.2.9",
+        "nodemon": "^2.0.2",
+        "prettier": "^1.19.1"
+    }
+}
