@@ -1,9 +1,10 @@
+require("dotenv").config()
 import multer from "multer"
 import aws from "aws-sdk"
 import multerS3 from "multer-s3"
 const s3 = new aws.S3({
-    accessKeyId: "AKIA2WSTBE5N4U3HMCG6",
-    secretAccessKey: "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",
+    accessKeyId: process.env.TOKEN_ACCESS_KEY,
+    secretAccessKey: process.env.SECRET_ACCESS_KEY,
 })
 const Storage = multer.diskStorage({
     destination(req, file, callback) {
