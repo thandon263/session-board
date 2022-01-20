@@ -1,5 +1,5 @@
 
-In your terminal run the following command to setup your project `Copy and Paste`:
+In your terminal run the following command to setup your project for `Mac` Users `Copy and Paste`:
 
 ```shell
     sh ./scripts/project-setup.sh
